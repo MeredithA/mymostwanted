@@ -1,3 +1,4 @@
+"use strict"
 
 function app(people){
   people = assignAges(people);
@@ -93,13 +94,12 @@ function searchByTraits(people) {
   function searchByName(people){
   let firstName = prompt("What is the person's first name?");
   let lastName = prompt("What is the person's last name?");
-  let searchArray = firstName + lastName;
   let newArray = people.filter(function (el) {
     if(el.firstName === firstName && el.lastName === lastName) {
       return true;
     }
       else if(el.firstName != firstName && el.lastname != lastName){
-      alert (searchArray +" was not found.")
+      alert (searchArray.length +" was not found.")
       return false;
     }
   });
