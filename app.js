@@ -1,4 +1,3 @@
-"use strict"
 
 function app(people){
   people = assignAges(people);
